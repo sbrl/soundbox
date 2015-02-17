@@ -1,4 +1,4 @@
-soundbox = function() {
+function SoundBox() {
 	this.sounds = {};
 	this.sound_callbacks = {};
 	this.add_sound = function(sound_name, path) {
@@ -13,14 +13,14 @@ soundbox = function() {
 		});
 	};
 	
-	this.remove_sound = function(sound_name) {
+	this.remove = function(sound_name) {
 		if(typeof this.sounds != "undefined")
 			delete this.sounds[sound_name];
 		if(typeof this.sound_callbacks == "function")
 			delete this.sound_callbacks[sound_name];
 	};
 	
-	this.play_sound = function(sound_name, callback) {
+	this.play = function(sound_name, callback) {
 		if(typeof this.sounds[sound_name] == "undefined")
 		{
 			console.error("Can't find sound called '" + sound_name + "'.");
