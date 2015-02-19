@@ -1,12 +1,23 @@
 # soundbox
 A super simple JS library for playing sound effects
 
-To use:
+ * Current size: `1.04kb`
+ * Current minified size: `0.64kb`
+
+## To use:
 
 ```javascript
 var soundbox = new SoundBox();
-soundbox.add("beep", "beep.wav");
+soundbox.load("beep", "beep.wav");
 
 // later....
-soundbox.play("beep");
+soundbox.play("beep", function() {
+	// do stuff
+}); // the callback is optional
 ```
+
+## Download
+
+ * [soundbox.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.js)
+ * [soundbox.min.js](https://github.com/sbrl/soundbox/blob/master/soundbox.min.js)
+
