@@ -19,5 +19,4 @@ soundbox.play("beep", function() {
 ## Download
 
  * [soundbox.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.js)
- * [soundbox.min.js](https://github.com/sbrl/soundbox/blob/master/soundbox.min.js)
-
+ * [soundbox.min.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.min.js)
