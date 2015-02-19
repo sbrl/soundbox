@@ -1,16 +1,17 @@
 function SoundBox() {
 	this.sounds = {};
 	this.sound_callbacks = {};
-	this.add_sound = function(sound_name, path) {
+	this.load = function(sound_name, path) {
 		this.sounds[sound_name] = new Audio(path);
 		// reset the sound ready for the next playing
-		this.sounds[sound_name].addEventListener("ended", function(event) {
+		this.sounds[sound_name].addEventListener("ended", (function(event) {
 			event.target.currentTime = 0;
 			if(typeof this.sound_callbacks[sound_name] == "function")
 			{
 				this.sound_callbacks[sound_name](sound_name);
+				delete this.sound_callbacks[sound_name];
 			}
-		});
+		}).bind(this));
 	};
 	
 	this.remove = function(sound_name) {
@@ -30,6 +31,6 @@ function SoundBox() {
 		if(typeof callback == "function")
 			this.sound_callbacks[sound_name] = callback;
 		
-		this..sounds[sound_name].play();
+		this.sounds[sound_name].play();
 	};
 }
