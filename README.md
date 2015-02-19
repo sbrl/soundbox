@@ -17,6 +17,7 @@ soundbox.play("beep", function() {
 ```
 
 ## Download
+The latest master should be perfectly stable. If you want something that you know will work, try the latest [release](https://github.com/sbrl/soundbox/releases).
 
  * [soundbox.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.js)
  * [soundbox.min.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.min.js)
