@@ -46,4 +46,4 @@ function SoundBox() {
 	};
 }
 
-SoundBox.version = "0.2.1";
+SoundBox.version = "0.2.2";
