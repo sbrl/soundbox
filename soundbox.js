@@ -37,12 +37,10 @@ function SoundBox() {
 		soundInstance.play();
 		
 		if(typeof callback == "function") {
-			console.log("Adding callback");
 			soundInstance.addEventListener("ended", callback);
 			return true;
 		}
 		else {
-			console.log("Returning promise");
 			return new Promise((resolve, reject) => soundInstance.addEventListener("ended", resolve));
 		}
 	};

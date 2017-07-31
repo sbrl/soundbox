@@ -3,8 +3,8 @@ A super simple JS library for playing sound effects and other audio.
 
 Now with button mashing support!
 
- * Current size: `1.2kb`
- * Current minified size: `0.78kb`
+ * Current size: `1.4kb`
+ * Current minified size: `0.74kb`
 
 ## To use:
 
