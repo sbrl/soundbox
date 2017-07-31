@@ -56,6 +56,8 @@ The latest master should be perfectly stable. If you want something that you kno
  * [soundbox.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.js)
  * [soundbox.min.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.min.js)
 
+soundbox is also available via [npm](https://npmjs.org/) here: [sound-box](https://www.npmjs.com/package/sound-box) - To install it simply type `npm install sound-box`.
+
 ## License
 SoundBox.js is licensed under MIT:
 
