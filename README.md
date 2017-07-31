@@ -41,6 +41,13 @@ soundbox.play("beep-a")
     .then(() => soundbox.play("victory"));
 ```
 
+### Additional Functionality
+Get the current version of SoundBox:
+
+```javascript
+console.log(`Soundbox is at ${SoundBox.version}`);
+```
+
 ## Download
 The latest master should be perfectly stable. If you want something that you know will work, try the latest [release](https://github.com/sbrl/soundbox/releases).
 

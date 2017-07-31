@@ -1,3 +1,11 @@
+/**
+ * SoundBox
+ * By Starbeamrainbowlabs
+ * A super simple JS library for playing sound effects and other audio.
+ *
+ * Note to self: When making a release, remember to update the version number at the bottom of the file!
+ */
+
 function SoundBox() {
 	this.sounds = {};
 	this.load = function(sound_name, path, callback) {
@@ -36,3 +44,5 @@ function SoundBox() {
 		}
 	};
 }
+
+SoundBox.version = "0.2";
