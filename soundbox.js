@@ -13,7 +13,10 @@ function SoundBox() {
 		if(typeof callback == "function")
 			this.sounds[sound_name].addEventListener("canplaythrough", callback);
 		else
-			return new Promise((resolve, reject) => this.sounds[sound_name].addEventListener("canplaythrough", resolve), this.sounds[sound_name].addEventListener("error", reject));
+			return new Promise((resolve, reject) => {
+				this.sounds[sound_name].addEventListener("canplaythrough", resolve);
+				this.sounds[sound_name].addEventListener("error", reject);
+			});
 	};
 	
 	this.remove = function(sound_name) {
