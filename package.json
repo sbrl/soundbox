@@ -1,0 +1,27 @@
+{
+  "name": "sound-box",
+  "version": "0.2.0",
+  "description": "A super simple JS library for playing sound effects and other audio. Now with button mashing support!",
+  "main": "soundbox.js",
+  "scripts": {
+    "test": "echo No tests have been written yet."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbrl/soundbox.git"
+  },
+  "keywords": [
+    "html",
+    "html5",
+    "javascript",
+    "web-audio-library",
+    "sound",
+    "browser"
+  ],
+  "author": "Starbeamrainbowlabs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbrl/soundbox/issues"
+  },
+  "homepage": "https://github.com/sbrl/soundbox#readme"
+}
