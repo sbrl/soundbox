@@ -1,19 +1,44 @@
 # soundbox
-A super simple JS library for playing sound effects
+A super simple JS library for playing sound effects and other audio.
 
- * Current size: `1.04kb`
- * Current minified size: `0.64kb`
+Now with button mashing support!
+
+ * Current size: `1.2kb`
+ * Current minified size: `0.78kb`
 
 ## To use:
 
+### With callbacks
+
 ```javascript
 var soundbox = new SoundBox();
-soundbox.load("beep", "beep.wav");
+soundbox.load("beep", "beep.wav", function() {
+    console.log("Loaded beep!");
+}); // The callback is optional
 
-// later....
+// Later....
 soundbox.play("beep", function() {
-	// do stuff
-}); // the callback is optional
+	// Do stuff
+}); // This callback is also optional
+```
+
+### With Promises
+
+```javascript
+var soundbox = new SoundBox();
+soundbox.load("beep-a", "beep-a.wav")
+    .then(
+        () => console.log("Loaded beep a!"),
+        () => console.error("Failed to load keep a :-(")
+    );
+soundbox.load("beep-b", "beep-b.wav");
+soundbox.load("beep-c", "beep-c.wav");
+soundbox.load("victory", "victory.mp3");
+
+soundbox.play("beep-a")
+    .then(() => soundbox.play("beep-b"))
+    .then(() => soundbox.play("beep-c"))
+    .then(() => soundbox.play("victory"));
 ```
 
 ## Download
@@ -23,7 +48,7 @@ The latest master should be perfectly stable. If you want something that you kno
  * [soundbox.min.js](https://raw.githubusercontent.com/sbrl/soundbox/master/soundbox.min.js)
 
 ## License
-SoundBox.js is licensed under MIT.
+SoundBox.js is licensed under MIT:
 
 ```
 The MIT License (MIT)
