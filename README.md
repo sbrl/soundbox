@@ -6,6 +6,8 @@ Now with button mashing support!
  * Current size: `1.4kb`
  * Current minified size: `0.74kb`
 
+[Demo](https://sbrl.github.io/soundbox/example.html)
+
 ## To use:
 
 ### With callbacks
