@@ -12,7 +12,11 @@
 		<button onclick="play_sound_2();">Play Sound 2</button>
 		<button onclick="play_sound_3();">Play Sound 3</button>
 		
+		<br />
+		
 		<button onclick="play_multiple_sounds();">Play Multiple Sounds</button>
+		
+		<button onclick="play_multiple_sounds_promise();">Play Multiple Sounds with Promises</button>
 		
 		
 		<!----------->
@@ -20,7 +24,7 @@
 			body { font-family: sans-serif; }
 		</style>
 		
-		<script src="soundbox.min.js"></script>
+		<script src="soundbox.js"></script>
 		<script>
 			window.addEventListener("load", function(event) {
 				window.soundbox = new SoundBox();
@@ -49,6 +53,13 @@
 						soundbox.play("beep3");
 					});
 				});
+			}
+			
+			function play_multiple_sounds_promise()
+			{
+				window.soundbox.play("beep1")
+					.then(() => window.soundbox.play("beep2"))
+					.then(() => window.soundbox.play("beep3"));
 			}
 		</script>
 	</body>

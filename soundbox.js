@@ -1,17 +1,11 @@
 function SoundBox() {
 	this.sounds = {};
-	this.sound_callbacks = {};
-	this.load = function(sound_name, path) {
+	this.load = function(sound_name, path, callback) {
 		this.sounds[sound_name] = new Audio(path);
-		// reset the sound ready for the next playing
-		this.sounds[sound_name].addEventListener("ended", (function(event) {
-			event.target.currentTime = 0;
-			if(typeof this.sound_callbacks[sound_name] == "function")
-			{
-				this.sound_callbacks[sound_name](sound_name);
-				delete this.sound_callbacks[sound_name];
-			}
-		}).bind(this));
+		if(typeof callback == "function")
+			this.sounds[sound_name].addEventListener("canplaythrough", callback);
+		else
+			return new Promise((resolve, reject) => this.sounds[sound_name].addEventListener("canplaythrough", resolve));
 	};
 	
 	this.remove = function(sound_name) {
@@ -22,15 +16,23 @@ function SoundBox() {
 	};
 	
 	this.play = function(sound_name, callback) {
-		if(typeof this.sounds[sound_name] == "undefined")
-		{
+		if(typeof this.sounds[sound_name] == "undefined") {
 			console.error("Can't find sound called '" + sound_name + "'.");
 			return false;
 		}
 		
-		if(typeof callback == "function")
-			this.sound_callbacks[sound_name] = callback;
+		var soundInstance = this.sounds[sound_name].cloneNode(true);
 		
-		this.sounds[sound_name].play();
+		soundInstance.play();
+		
+		if(typeof callback == "function") {
+			console.log("Adding callback");
+			soundInstance.addEventListener("ended", callback);
+			return true;
+		}
+		else {
+			console.log("Returning promise");
+			return new Promise((resolve, reject) => soundInstance.addEventListener("ended", resolve));
+		}
 	};
 }
