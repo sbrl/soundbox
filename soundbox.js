@@ -40,7 +40,7 @@ class SoundBox {
 		soundInstance.volume = volume;
 		soundInstance.play();
 		
-		if(typeof b == "function") {
+		if(typeof callback == "function") {
 			soundInstance.addEventListener("ended", callback);
 			return true;
 		}
