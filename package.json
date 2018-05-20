@@ -4,7 +4,7 @@
   "description": "A super simple JS library for playing sound effects and other audio. Now with button mashing support!",
   "main": "soundbox.js",
   "scripts": {
-    "test": "echo No tests have been written yet."
+    "test": "echo How do you automatically test a browser-based sound player? I have no idea...."
   },
   "repository": {
     "type": "git",
