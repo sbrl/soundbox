@@ -1,7 +1,8 @@
 # soundbox
 A super simple JS library for playing sound effects and other audio.
 
-Now with button mashing support!
+ * v0.2: Now with button mashing support!
+ * v0.3: Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
 
  * Current size: `1.4kb`
  * Current minified size: `0.74kb`
@@ -22,6 +23,8 @@ soundbox.load("beep", "beep.wav", function() {
 soundbox.play("beep", function() {
 	// Do stuff
 }); // This callback is also optional
+// The 3rd parameter is the volume: It should be between 0 and 1
+soundbox.play("beep", some_callback, 0.8);
 ```
 
 ### With Promises
@@ -41,6 +44,10 @@ soundbox.play("beep-a")
     .then(() => soundbox.play("beep-b"))
     .then(() => soundbox.play("beep-c"))
     .then(() => soundbox.play("victory"));
+    
+// The 3rd parameter is the volume: The callback can be omitted to enable promise mode
+soundbox.play("beep", null, 0.8)
+    .then(() => soundbox.play("victory"))
 ```
 
 ### Additional Functionality
