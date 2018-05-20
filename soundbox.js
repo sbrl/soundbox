@@ -10,7 +10,6 @@
 class SoundBox {
 	constructor() {
 		this.sounds = {};
-		
 	}
 	
 	load(sound_name, path, callback) {
@@ -31,17 +30,17 @@ class SoundBox {
 			delete this.sound_callbacks[sound_name];
 	};
 	
-	play(sound_name, callback) {
+	play(sound_name, callback, volume = 1) {
 		if(typeof this.sounds[sound_name] == "undefined") {
 			console.error("Can't find sound called '" + sound_name + "'.");
 			return false;
 		}
 		
 		var soundInstance = this.sounds[sound_name].cloneNode(true);
-		
+		soundInstance.volume = volume;
 		soundInstance.play();
 		
-		if(typeof callback == "function") {
+		if(typeof b == "function") {
 			soundInstance.addEventListener("ended", callback);
 			return true;
 		}
@@ -51,6 +50,6 @@ class SoundBox {
 	};
 }
 
-SoundBox.version = "0.2.2";
+SoundBox.version = "0.3";
 
 export default SoundBox;
