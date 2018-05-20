@@ -24,6 +24,11 @@ window
 			soundbox.play("beep3");
 		});
 
+	document.getElementById("play_quiet")
+		.addEventListener("click", function() {
+			soundbox.play("beep2", null, 0.5);
+		});
+
 	document.getElementById("play_multiple_sounds")
 		.addEventListener("click", function() {
 			soundbox.play("beep1", function() {
