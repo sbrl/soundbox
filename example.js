@@ -26,7 +26,7 @@ window
 
 	document.getElementById("play_quiet")
 		.addEventListener("click", function() {
-			soundbox.play("beep2", null, 0.5);
+			soundbox.play("beep2", null, 0.25);
 		});
 
 	document.getElementById("play_multiple_sounds")
