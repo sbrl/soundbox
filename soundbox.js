@@ -1,6 +1,7 @@
 /**
  * SoundBox
  * By Starbeamrainbowlabs
+ * License: MIT License
  * A super simple JS library for playing sound effects and other audio.
  *
  * Note to self: When making a release, remember to update the version number at the bottom of the file!
