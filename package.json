@@ -2,7 +2,7 @@
   "name": "sound-box",
   "version": "0.3.1",
   "description": "A super simple JS library for playing sound effects and other audio. Now with button mashing support!",
-  "main": "soundbox.js",
+  "main": "soundbox.jsm",
   "scripts": {
     "test": "echo How do you automatically test a browser-based sound player? I have no idea...."
   },
