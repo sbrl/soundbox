@@ -45,7 +45,7 @@ class SoundBox {
 		
 		// Don't forget to remove the instance from the instances array
 		soundInstance.addEventListener("ended", () => {
-			let index = this.instances.indexOf(soundInstance, 1);
+			let index = this.instances.indexOf(soundInstance);
 			if(index != -1) this.instances.splice(index, 1);
 		});
 		
@@ -59,10 +59,13 @@ class SoundBox {
 	
 	stop_all() {
 		// Pause all currently playing sounds
-		for (let instance of this.instances)
-		    	instance.dispatchEvent((new Event('ended')));
+		
+		// Shallow clone the array to avoid issues with instances auto-removing themselves
+		let instances_to_stop = this.instances.slice();
+		for(let instance of instances_to_stop) {
 			instance.pause();
-		this.instances = []; // Empty the instances array
+			instance.dispatchEvent(new Event("ended"));
+		}
 	}
 }
 

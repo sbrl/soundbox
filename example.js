@@ -13,27 +13,27 @@ window.addEventListener("load", function(event) {
 		.addEventListener("click", function() {
 			soundbox.play("beep1");
 		});
-
+	
 	document.getElementById("play_sound_2")
 		.addEventListener("click", function() {
 			soundbox.play("beep2");
 		});
-
+	
 	document.getElementById("play_sound_3")
 		.addEventListener("click", function() {
 			soundbox.play("beep3");
 		});
-
+	
 	document.getElementById("play_long_sound")
 		.addEventListener("click", function() {
 			soundbox.play("long_beep");
 		});
-
+	
 	document.getElementById("play_quiet")
 		.addEventListener("click", function() {
 			soundbox.play("beep2", null, 0.25);
 		});
-
+	
 	document.getElementById("play_multiple_sounds")
 		.addEventListener("click", function() {
 			soundbox.play("beep1", function() {
@@ -42,12 +42,21 @@ window.addEventListener("load", function(event) {
 				});
 			});
 		});
-		
+	
 	document.getElementById("play_multiple_sounds_promise")
 		.addEventListener("click", function() {
 			window.soundbox.play("beep1")
 				.then(() => window.soundbox.play("beep2"))
 				.then(() => window.soundbox.play("beep3"));
+		});
+	
+	document.getElementById("play_lots")
+		.addEventListener("click", function() {
+			setTimeout(() => {
+				for(let i = 0; i < 10; i++) {
+					window.soundbox.play("long_beep");
+				}
+			}, 1000);
 		});
 	
 	document.getElementById("stop_sounds")
