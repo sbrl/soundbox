@@ -60,6 +60,7 @@ class SoundBox {
 	stop_all() {
 		// Pause all currently playing sounds
 		for (let instance of this.instances)
+			instance.dispatchEvent((new Event('ended')));
 			instance.pause();
 		this.instances = []; // Empty the instances array
 	}
