@@ -60,10 +60,11 @@ class SoundBox {
 	stop_all() {
 		// Pause all currently playing sounds
 		for (let instance of this.instances)
+		    	instance.dispatchEvent((new Event('ended')));
 			instance.pause();
 		this.instances = []; // Empty the instances array
 	}
 }
 
-SoundBox.version = "0.3.2";
+SoundBox.version = "0.3.3";
 export default SoundBox;
