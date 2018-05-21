@@ -106,6 +106,13 @@ soundbox.play("beep", function() {
 }, 0.5);
 ```
 
+### Specify the default volume
+If you'd like to change the default volume that sounds are played at, do this:
+
+```javascript
+soundbox.default_volume = 0.45; // Sets the default volume to 45%
+```
+
 ### Stop all sounds
 You can stop all currently playing sounds like this:
 

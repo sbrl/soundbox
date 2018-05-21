@@ -12,6 +12,8 @@ class SoundBox {
 	constructor() {
 		this.sounds = {}; // The loaded sounds and their instances
 		this.instances = []; // Sounds that are currently playing
+		
+		this.default_volume = 1;
 	}
 	
 	load(sound_name, path, callback) {
@@ -30,14 +32,14 @@ class SoundBox {
 			delete this.sounds[sound_name];
 	};
 	
-	play(sound_name, callback, volume = 1) {
+	play(sound_name, callback, volume = null) {
 		if(typeof this.sounds[sound_name] == "undefined") {
 			console.error("Can't find sound called '" + sound_name + "'.");
 			return false;
 		}
 		
 		var soundInstance = this.sounds[sound_name].cloneNode(true);
-		soundInstance.volume = volume;
+		soundInstance.volume = volume || this.default_volume;
 		soundInstance.play();
 		this.instances.push(soundInstance);
 		

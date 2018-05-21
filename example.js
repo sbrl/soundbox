@@ -49,9 +49,16 @@ window.addEventListener("load", function(event) {
 				.then(() => window.soundbox.play("beep2"))
 				.then(() => window.soundbox.play("beep3"));
 		});
+	
 	document.getElementById("stop_sounds")
 		.addEventListener("click", function() {
 			window.soundbox.stop_all();
 		});
+	
+	document.getElementById("set_default_volume")
+		.addEventListener("click", function() {
+			window.soundbox.default_volume = parseFloat(document.getElementById("input_volume").value);
+		});
+	
 	
 });
