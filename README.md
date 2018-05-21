@@ -136,10 +136,10 @@ console.log(`Soundbox is at ${SoundBox.version}`);
 ```
 
 ## Changelog
- * v0.2: Now with button mashing support!
- * v0.3: Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
- * v0.3.1: Added non-es6 version and build system to automate minification.
- * v0.3.2: Added `.stop_all()` and `default_volume`
+ * **v0.2:** Now with button mashing support!
+ * **v0.3:** Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
+ * **v0.3.1:** Added non-es6 version and build system to automate minification.
+ * **v0.3.2:** Added `.stop_all()` and `default_volume`
 
 ## License
 SoundBox.js is licensed under MIT:
