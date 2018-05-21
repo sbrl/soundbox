@@ -41,6 +41,7 @@ function task_setup {
 	check_command java true; # For google-closure-compiler
 	check_command google-closure-compiler true;
 	check_command npm-check true optional;
+	check_command python true optional;
 	task_end $?;
 	
 	task_begin "Installing npm packages";
@@ -56,7 +57,7 @@ function task_setup {
 
 function task_dev-server {
 	task_begin "Starting development server";
-	php -S [::1]:40482 &
+	python -m SimpleHTTPServer 43525 & # python reads from /etc/mime.types I think
 	exit_code=$?;
 	echo $! >/tmp/micro-lantern-dev-server.pid;
 	task_end $?; # Should be 0 unless php died for some reason
@@ -70,6 +71,11 @@ function task_dev-server-stop {
 	rm /tmp/micro-lantern-dev-server.pid;
 	
 	task_end $?;
+}
+
+function task_dev-server-restart {
+	task_dev-server-stop;
+	task_dev-server;
 }
 
 function task_main {

@@ -2,12 +2,12 @@
 
 import SoundBox from "./soundbox.jsm";
 
-window
-	.addEventListener("load", function(event) {
+window.addEventListener("load", function(event) {
 	window.soundbox = new SoundBox();
-	soundbox.load("beep1", "examplesounds/beep1.wav");
+	soundbox.load("beep1", "examplesounds/beep1.wav")
 	soundbox.load("beep2", "examplesounds/beep2.wav");
 	soundbox.load("beep3", "examplesounds/beep3.wav");
+	soundbox.load("long_beep", "examplesounds/long_beep.wav");
 	
 	document.getElementById("play_sound_1")
 		.addEventListener("click", function() {
@@ -24,6 +24,11 @@ window
 			soundbox.play("beep3");
 		});
 
+	document.getElementById("play_long_sound")
+		.addEventListener("click", function() {
+			soundbox.play("long_beep");
+		});
+
 	document.getElementById("play_quiet")
 		.addEventListener("click", function() {
 			soundbox.play("beep2", null, 0.25);
@@ -37,12 +42,16 @@ window
 				});
 			});
 		});
-
+		
 	document.getElementById("play_multiple_sounds_promise")
 		.addEventListener("click", function() {
 			window.soundbox.play("beep1")
 				.then(() => window.soundbox.play("beep2"))
 				.then(() => window.soundbox.play("beep3"));
+		});
+	document.getElementById("stop_sounds")
+		.addEventListener("click", function() {
+			window.soundbox.stop_all();
 		});
 	
 });
