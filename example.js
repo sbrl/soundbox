@@ -1,6 +1,6 @@
 "use strict";
 
-import SoundBox from "./soundbox.js";
+import SoundBox from "./soundbox.jsm";
 
 window
 	.addEventListener("load", function(event) {
