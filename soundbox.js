@@ -51,4 +51,4 @@ class SoundBox {
 	};
 }
 
-SoundBox.version = "0.3";
+SoundBox.version = "0.3.1";
