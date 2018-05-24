@@ -141,6 +141,10 @@ console.log(`Soundbox is at ${SoundBox.version}`);
  * **v0.3.1:** Added non-es6 version and build system to automate minification.
  * **v0.3.2:** Added `.stop_all()` and `default_volume`
 
+## Real-World Usage
+ - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
+ - ...? _(Are you using soundbox? Let me know by opening an issue or contacting me and I'll add your project here!)_
+
 ## License
 SoundBox.js is licensed under MIT:
 
