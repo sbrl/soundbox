@@ -87,14 +87,14 @@ function task_main {
 	task_begin "Generating ES6 version";
 	
 	subtask_begin "Normal";
-	cp soundbox.js soundbox.jsm;
+	cp soundbox.js soundbox.mjs;
 	echo -e "export default SoundBox;" >>soundbox.jsm;
 	subtask_end $?;
 	
 	subtask_begin "Minified";
-	cat header.js >soundbox.min.jsm
-	cat soundbox.min.js >>soundbox.min.jsm
-	echo -e "export default SoundBox;" >>soundbox.min.jsm;
+	cat header.js >soundbox.min.mjs
+	cat soundbox.min.js >>soundbox.min.mjs
+	echo -e "export default SoundBox;" >>soundbox.min.mjs;
 	subtask_end $?;
 	
 	task_end $?;
