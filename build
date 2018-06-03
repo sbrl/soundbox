@@ -88,7 +88,7 @@ function task_main {
 	
 	subtask_begin "Normal";
 	cp soundbox.js soundbox.mjs;
-	echo -e "export default SoundBox;" >>soundbox.jsm;
+	echo -e "export default SoundBox;" >>soundbox.mjs;
 	subtask_end $?;
 	
 	subtask_begin "Minified";
