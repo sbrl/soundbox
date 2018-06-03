@@ -140,6 +140,9 @@ console.log(`Soundbox is at ${SoundBox.version}`);
  * **v0.3:** Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
  * **v0.3.1:** Added non-es6 version and build system to automate minification.
  * **v0.3.2:** Added `.stop_all()` and `default_volume`
+ * **v0.3.3:** Fix a bug in `.stop_all()`
+ * **v0.3.4:** Fix another bug in `.stop_all()`
+ * **v0.3.5:** Update from `.jsm` to `.mjs` for file extension
 
 ## Real-World Usage
  - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
