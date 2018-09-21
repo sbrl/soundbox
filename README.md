@@ -144,6 +144,7 @@ console.log(`Soundbox is at ${SoundBox.version}`);
  * **v0.3.4:** Fix another bug in `.stop_all()`
  * **v0.3.5:** Update from `.jsm` to `.mjs` for file extension
  * **v0.3.6:** Fix `main` definition in `package.json`
+ * **v0.3.6:** Update changelog in README
 
 ## Real-World Usage
  - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
