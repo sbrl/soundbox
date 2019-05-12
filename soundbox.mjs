@@ -32,7 +32,7 @@ class SoundBox {
 			delete this.sounds[sound_name];
 	};
 	
-	play(sound_name, callback, volume = null) {
+	play(sound_name, callback, volume = null, loop = false) {
 		if(typeof this.sounds[sound_name] == "undefined") {
 			console.error("Can't find sound called '" + sound_name + "'.");
 			return false;
@@ -40,6 +40,7 @@ class SoundBox {
 		
 		var soundInstance = this.sounds[sound_name].cloneNode(true);
 		soundInstance.volume = volume || this.default_volume;
+		soundInstance.loop = loop;
 		soundInstance.play();
 		this.instances.push(soundInstance);
 		
