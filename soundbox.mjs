@@ -70,5 +70,5 @@ class SoundBox {
 	}
 }
 
-SoundBox.version = "0.3.4";
+SoundBox.version = "0.3.7";
 export default SoundBox;
