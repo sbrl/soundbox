@@ -76,7 +76,7 @@ Similarly, playing a sound takes 2 forms: callback and promise.
 ```javascript
 // Promise mode
 soundbox.play("beep-a")
-    .then(() => soundbox.play("beep-b"))
+    .then(() => soundbox.play("beep-b")) /* The .then() is optional of course */
     .then(() => soundbox.play("beep-c"))
     .then(() => soundbox.play("victory"));
 ```
@@ -113,6 +113,22 @@ If you'd like to change the default volume that sounds are played at, do this:
 soundbox.default_volume = 0.45; // Sets the default volume to 45%
 ```
 
+#### Looping again and again
+As of v0.3.7, looping support has been added. Use it like this:
+
+```javascript
+// Promise mode
+soundbox.play("rocket", null, 0.8, true)
+    .then(() => /* .... */);
+```
+
+```javascript
+// Callback mode
+soundbox.play("rocket", function() {
+	// Do stuff
+}, null, true); // A null volume = use the default volume. Supported in both modes of operation
+```
+
 ### Stop all sounds
 You can stop all currently playing sounds like this:
 
@@ -136,15 +152,16 @@ console.log(`Soundbox is at ${SoundBox.version}`);
 ```
 
 ## Changelog
- * **v0.2:** Now with button mashing support!
- * **v0.3:** Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
- * **v0.3.1:** Added non-es6 version and build system to automate minification.
- * **v0.3.2:** Added `.stop_all()` and `default_volume`
- * **v0.3.3:** Fix a bug in `.stop_all()`
- * **v0.3.4:** Fix another bug in `.stop_all()`
- * **v0.3.5:** Update from `.jsm` to `.mjs` for file extension
- * **v0.3.6:** Fix `main` definition in `package.json`
- * **v0.3.6:** Update changelog in README
+ - **v0.2:** Now with button mashing support!
+ - **v0.3:** Added volume support! Converted for use as an ES6 module. If this doesn't suit you, then just remove the `import` and `export` statements to make it the way it was before.
+ - **v0.3.1:** Added non-es6 version and build system to automate minification.
+ - **v0.3.2:** Added `.stop_all()` and `default_volume`
+ - **v0.3.3:** Fix a bug in `.stop_all()`
+ - **v0.3.4:** Fix another bug in `.stop_all()`
+ - **v0.3.5:** Update from `.jsm` to `.mjs` for file extension
+ - **v0.3.6:** Fix `main` definition in `package.json`
+ - **v0.3.6:** Update changelog in README
+ - **v0.3.7:** Add optional `loop` parameter to `.play()`
 
 ## Real-World Usage
  - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
