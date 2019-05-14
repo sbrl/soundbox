@@ -165,6 +165,7 @@ console.log(`Soundbox is at ${SoundBox.version}`);
 
 ## Real-World Usage
  - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
+ - @kdallas has used it as part of a [100 movies list](https://www.weblabsperth.com.au/100-movies/)
  - ...? _(Are you using soundbox? Let me know by opening an issue or contacting me and I'll add your project here!)_
 
 ## License
