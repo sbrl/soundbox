@@ -4,7 +4,7 @@ A super simple JS library for playing sound effects and other audio.
  * Current size: `1.4kb`
  * Current minified size: `0.74kb`
 
-[Demo](https://sbrl.github.io/soundbox/example.html)
+[Demo](https://sbrl.github.io/soundbox/example.html) (see also the [Real-World Usage](#real-world-usage) section!)
 
 Quick example:
 
