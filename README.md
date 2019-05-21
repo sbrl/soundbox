@@ -3,6 +3,7 @@ A super simple JS library for playing sound effects and other audio.
 
  * Current size: `1.4kb`
  * Current minified size: `0.74kb`
+ * Current npm package size: ![current minified size badge](https://img.shields.io/bundlephobia/min/sound-box.svg)
 
 [Demo](https://sbrl.github.io/soundbox/example.html) (see also the [Real-World Usage](#real-world-usage) section!)
 
