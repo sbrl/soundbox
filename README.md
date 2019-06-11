@@ -163,6 +163,7 @@ console.log(`Soundbox is at ${SoundBox.version}`);
  - **v0.3.6:** Fix `main` definition in `package.json`
  - **v0.3.7:** Update changelog in README
  - **v0.3.8:** Add optional `loop` parameter to `.play()`
+ - **v0.3.9:** Documentation release. Use badges to show size.
 
 ## Real-World Usage
  - @MyTheValentinus has [created a mobile web app for playing sound-effects and other sounds](https://github.com/MyTheValentinus/soundbox)
