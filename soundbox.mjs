@@ -39,7 +39,7 @@ class SoundBox {
 		}
 		
 		var soundInstance = this.sounds[sound_name].cloneNode(true);
-		soundInstance.volume = volume || this.default_volume;
+		soundInstance.volume = typeof volume === 'number' ? volume : this.default_volume;
 		soundInstance.loop = loop;
 		soundInstance.play();
 		this.instances.push(soundInstance);
@@ -70,5 +70,5 @@ class SoundBox {
 	}
 }
 
-SoundBox.version = "0.3.7";
+SoundBox.version = "0.3.8";
 export default SoundBox;
