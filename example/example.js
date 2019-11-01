@@ -1,13 +1,13 @@
 "use strict";
 
-import SoundBox from "./soundbox.mjs";
+import SoundBox from "../soundbox.mjs";
 
 window.addEventListener("load", function(event) {
 	window.soundbox = new SoundBox();
-	soundbox.load("beep1", "examplesounds/beep1.wav")
-	soundbox.load("beep2", "examplesounds/beep2.wav");
-	soundbox.load("beep3", "examplesounds/beep3.wav");
-	soundbox.load("long_beep", "examplesounds/long_beep.wav");
+	soundbox.load("beep1", "sounds/beep1.mp3")
+	soundbox.load("beep2", "sounds/beep2.mp3");
+	soundbox.load("beep3", "sounds/beep3.mp3");
+	soundbox.load("long_beep", "sounds/long_beep.mp3");
 	
 	document.getElementById("play_sound_1")
 		.addEventListener("click", function() {

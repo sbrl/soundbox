@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/sbrl/soundbox/issues"
   },
-  "homepage": "https://github.com/sbrl/soundbox#readme"
+  "homepage": "https://github.com/sbrl/soundbox#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }
