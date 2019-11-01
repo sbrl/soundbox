@@ -4,7 +4,8 @@
   "description": "A super simple JS library for playing sound effects and other audio. Now with button mashing support!",
   "main": "soundbox.mjs",
   "scripts": {
-    "test": "echo How do you automatically test a browser-based sound player? I have no idea...."
+    "test": "echo How do you automatically test a browser-based sound player? I have no idea....",
+    "serve": "http-server example -o"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,7 @@
     "url": "https://github.com/sbrl/soundbox/issues"
   },
   "homepage": "https://github.com/sbrl/soundbox#readme",
-  "dependencies": {
+  "devDependencies": {
     "http-server": "^0.11.1"
   }
 }
