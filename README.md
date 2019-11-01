@@ -7,7 +7,14 @@ A super simple JS library for playing sound effects and other audio.
 
 [Demo](https://sbrl.github.io/soundbox/example.html) (see also the [Real-World Usage](#real-world-usage) section!)
 
-Quick example:
+## Launch demo
+
+```
+npm install
+npm run serve
+```
+
+## Quick example:
 
 ```javascript
 var soundbox = new SoundBox();
