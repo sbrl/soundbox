@@ -5,7 +5,7 @@
   "main": "soundbox.mjs",
   "scripts": {
     "test": "echo How do you automatically test a browser-based sound player? I have no idea....",
-    "serve": "http-server example -o"
+    "demo": "live-server ./ --open='./example/'"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/sbrl/soundbox#readme",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "live-server": "^1.2.1"
   }
 }
