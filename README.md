@@ -4,7 +4,7 @@ A super simple JS library for playing sound effects and other audio.
 ![npm package size](https://img.shields.io/bundlephobia/min/sound-box.svg) | ![minified + gzipped size](https://badgen.net/bundlephobia/minzip/sound-box)
 
 ## Demo
-Check it out in action with the [Online Demo](https://sbrl.github.io/soundbox/example.html) (see also the [Real-World Usage](#real-world-usage) section :D)!
+Check it out in action with the [Online Demo](https://sbrl.github.io/soundbox/example) (see also the [Real-World Usage](#real-world-usage) section :D)!
 
 ### Running Demo Locally
 The demo can also be run locally. Clone this repository, and then run the following from the root of this repo:
