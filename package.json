@@ -25,7 +25,7 @@
     "url": "https://github.com/sbrl/soundbox/issues"
   },
   "homepage": "https://github.com/sbrl/soundbox#readme",
-  "dependencies": {
+  "devDependencies": {
     "alive-server": "^1.3.0"
   }
 }
